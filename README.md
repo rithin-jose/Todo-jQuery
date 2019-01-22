@@ -1,1 +1,1 @@
-# js-game
+#game
