@@ -1,1 +1,26 @@
-var _0x3826=['ZmFkZU91dA==','c29ycnkgbm8gZmxhZyBoZXJlLHRyeSBydW5uaW5nOmZsYWcgaW4gY29uc29sZQ==','aW5wdXRbdHlwZT0ndGV4dCdd','a2V5cHJlc3M=','d2hpY2g=','dmFs','YXBwZW5k','PC9saT4=','LmZhLXBsdXM=','Y2xpY2s=','ZmFkZUlu','YXN0e2FzdGhyYV9hbGVydH0=','Y29tcGxldGVk','c29ycnkgbm8gZmxhZyBoZXJl','cGFyZW50'];(function(_0x4d4f5c,_0x95bf11){var _0x2528d4=function(_0x101958){while(--_0x101958){_0x4d4f5c['push'](_0x4d4f5c['shift']());}};_0x2528d4(++_0x95bf11);}(_0x3826,0x174));var _0x3cc0=function(_0x2c770a,_0x265174){_0x2c770a=_0x2c770a-0x0;var _0xfa7bdf=_0x3826[_0x2c770a];if(_0x3cc0['wzBsdw']===undefined){(function(){var _0x3c443c;try{var _0x3f0fa4=Function('return\x20(function()\x20'+'{}.constructor(\x22return\x20this\x22)(\x20)'+');');_0x3c443c=_0x3f0fa4();}catch(_0x5746de){_0x3c443c=window;}var _0xc11ff1='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';_0x3c443c['atob']||(_0x3c443c['atob']=function(_0x2057c1){var _0x32efd8=String(_0x2057c1)['replace'](/=+$/,'');for(var _0x35923c=0x0,_0x45f008,_0x2fec17,_0x302af0=0x0,_0x2aa692='';_0x2fec17=_0x32efd8['charAt'](_0x302af0++);~_0x2fec17&&(_0x45f008=_0x35923c%0x4?_0x45f008*0x40+_0x2fec17:_0x2fec17,_0x35923c++%0x4)?_0x2aa692+=String['fromCharCode'](0xff&_0x45f008>>(-0x2*_0x35923c&0x6)):0x0){_0x2fec17=_0xc11ff1['indexOf'](_0x2fec17);}return _0x2aa692;});}());_0x3cc0['NauWrn']=function(_0x317e5a){var _0x1fb965=atob(_0x317e5a);var _0x1b10bf=[];for(var _0xbf2978=0x0,_0x47b5b8=_0x1fb965['length'];_0xbf2978<_0x47b5b8;_0xbf2978++){_0x1b10bf+='%'+('00'+_0x1fb965['charCodeAt'](_0xbf2978)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x1b10bf);};_0x3cc0['OnHaHG']={};_0x3cc0['wzBsdw']=!![];}var _0x214bc7=_0x3cc0['OnHaHG'][_0x2c770a];if(_0x214bc7===undefined){_0xfa7bdf=_0x3cc0['NauWrn'](_0xfa7bdf);_0x3cc0['OnHaHG'][_0x2c770a]=_0xfa7bdf;}else{_0xfa7bdf=_0x214bc7;}return _0xfa7bdf;};$('ul')['on']('click','li',function(){$(this)['toggleClass'](_0x3cc0('0x0'));alert(_0x3cc0('0x1'));});$('ul')['on']('click','span',function(_0x35992b){$(this)[_0x3cc0('0x2')]()[_0x3cc0('0x3')](0x3e8,function(){$(this)['remove']();alert(_0x3cc0('0x4'));});_0x35992b['stopPropagation']();});$(_0x3cc0('0x5'))[_0x3cc0('0x6')](function(_0x2bb904){if(_0x2bb904[_0x3cc0('0x7')]===0xd){var _0x567b4a=$(this)[_0x3cc0('0x8')]();$(this)[_0x3cc0('0x8')]('');$('ul')[_0x3cc0('0x9')]('<li><span><i\x20class=\x27fas\x20fa-trash\x27></i></span>'+_0x567b4a+_0x3cc0('0xa'));input();}});input();$(_0x3cc0('0xb'))[_0x3cc0('0xc')](function(){$(_0x3cc0('0x5'))[_0x3cc0('0xd')](0x1f4);});function input(){$(_0x3cc0('0x5'))[_0x3cc0('0x3')](0x0);}var flag=_0x3cc0('0xe');
+// Check Off Specific Todos By Clicking
+$("ul").on("click", "li", function(){
+	$(this).toggleClass("completed");
+});
+
+//To delete Todo
+$("ul").on("click", "span", function(event){
+	$(this).parent().fadeOut(500,function(){
+		$(this).remove();
+	});
+	event.stopPropagation();
+});
+
+$("input[type='text']").keypress(function(event){
+	if(event.which === 13){
+		//grabbing new todo text from input
+		var todoText = $(this).val();
+		$(this).val("");
+		//create a new li and add to ul
+		$("ul").append("<li><span><i class='fa fa-trash'></i></span> " + todoText + "</li>")
+	}
+});
+
+$(".fa-plus").click(function(){
+	$("input[type='text']").fadeToggle();
+});
