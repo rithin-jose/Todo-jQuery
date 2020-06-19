@@ -16,4 +16,4 @@ open the project in any code editor and run a live server and the output will be
 see live server documentation for  default port.
 
 ## License
-Todo-jQuery is licensed under [GNU Lesser General Public License v3.0]()
+Todo-jQuery is licensed under [GNU Lesser General Public License v3.0](https://github.com/rithin-jose/Todo-jQuery/blob/master/License.md)
